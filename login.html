@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <title>log-in</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+  
+  
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet">
+</head>
+    <style>
+        .error{
+            color:pink;
+        }
+            table{
+                text-align:center;
+                
+            }
+           table tr h3{
+                text-align: center;
+            }
+        
+    </style>
+</head>
+
+
+<body style="background-color: rgb(46, 21, 21); background-size: cover;">
+    <form action="index.html" method="get" id="register">
+        <nav>
+            <div class="logo"> Watches</div>
+            <div class="nav-items">
+                <ul>
+                   <i class=" fa fa-search"></i> 
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#links">Contact</a></li>
+                    <a href="login.html"><button>Login</button></a>
+    
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="column1">
+                <h1>Premium Watches</h1>
+                <p>Elevate your every second with our watches. 
+                    Order now and get 15% off on your first order.
+                </p>
+                <button>Order now</button>
+            </div>
+            <div class="column2">
+                <img src="./watch.jpg" alt="watch" width="500px">
+            </div>
+        </div>
+    
+    <table  border=" " cellpading="0" cellspacing="0" align="center" style="font-size:larger;text-align:center;color: blue;">
+        <tr ><th colspan="2"><h1 style="text-align: center;color:rgb(225, 178, 178)">Log-in</h1></th></tr>
+
+   <tr><th><h1>Email Id</h1</th><td><input type="email" name="mail"></td></tr>
+   <tr><th><h1>Password</h1></th><td><input type="text" name="password"></td></tr> 
+   <tr><th></th><th><input type="submit"><input type="reset"></th></tr>
+
+   
+   </table></h1>
+
+
+</form>
+</body>
+<script src="jquary.js"></script>
+<script src="validation1.js"></script> 
+<script>
+    $(function(){
+        $("#register").validate({
+            rules:{
+            password:"required",
+                                mail:{
+                    required:true,
+                    email:true,
+                },
+
+               agree:"required"
+            },
+       
+       
+        messages:{
+            password:"Please write your password",
+            
+            mail:"Please write your log-in Email",
+        },
+        submitHandler:function(form){
+            form.submit();
+        }
+    })
+   
+    })
+</script>
+</html>
